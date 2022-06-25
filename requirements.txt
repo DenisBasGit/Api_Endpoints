@@ -1,0 +1,6 @@
+mysqlclient
+djangorestframework
+serializers
+django-filter
+django-multiselectfield
+python-decouple
