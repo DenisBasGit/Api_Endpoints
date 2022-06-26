@@ -7,6 +7,7 @@
   Connect to local database:
   
   1.You need create mysql database with name 'wow'
+  
   2.In .env-file change params: DATABASE.USER, DATABASE.PASSWORD
   
 # STEP 3 
