@@ -18,6 +18,8 @@
   
   3.Enter: python3 manage.py migrate
   
+  4.Enter: python3 manage.py runserver
+  
   You need to create superuser for checking admin panel
   
   1. python3 manage.py createsuperuser
