@@ -11,4 +11,4 @@ class DoctorFilter(filters.FilterSet):
 
     class Meta:
         model = Doctor
-        fields = ['name', 'experience']
+        fields = ['name', 'years_of_experience']
