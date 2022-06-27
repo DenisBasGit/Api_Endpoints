@@ -30,9 +30,11 @@
 
 2. http://127.0.0.1:8000/api/v1/doctorlist/ (Get a list of Doctors, you can see pagination)
 
-    2.1 http://127.0.0.1:8000/api/v1/doctorlist/?ordering=direction (filtering by direction )
+    2.1 http://127.0.0.1:8000/api/v1/doctorlist/?ordering=direction (filtering by direction )  (Searching current doctor)
   
     2.2 http://127.0.0.1:8000/api/v1/doctorlist/?minyears_of_experience=2&ordering=years_of_experience (filtering by experience)
+    3.
+    4.3 http://127.0.0.1:8000/api/v1/doctorlist/?search=<doctor name>
   
   
 3. http://127.0.0.1:8000/api/v1/doctorlist/sort (by default sorted by number sort and name)
