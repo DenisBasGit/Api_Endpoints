@@ -81,12 +81,13 @@ WSGI_APPLICATION = 'Api_Endpoints.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'wow',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': 'Dkfl2003ua',
+        'ENGINE': config('DATABASES.ENGINE'),
+        'NAME': config('DATABASES.NAME'),
+        'USER': config('DATABASES.USER'),
+        'PASSWORD': config('DATABASES.PASSWORD'),
+        'HOST': config('DATABASES.HOST'),
+        'PORT': config('DATABASES.PORT'),
+        'NETWORK': config('DATABASES.NETWORK'),
     }
 }
 
