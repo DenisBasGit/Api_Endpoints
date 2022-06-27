@@ -6,7 +6,7 @@
 # STEP 2
   Connect to local database:
   
-  1.You need create mysql database with name 'wow'
+  1.You need create mysql database with name 'endp'
   
   2.In .env-file change params: DATABASE.USER, DATABASE.PASSWORD
   
