@@ -12,3 +12,11 @@ class DoctorFilter(filters.FilterSet):
     class Meta:
         model = Doctor
         fields = ['name', 'years_of_experience']
+
+class DirectionFilter(filters.FilterSet):
+    name = CharFilterInFilter(field_name='directions__name', lookup_expr='in')
+    experience = filters.RangeFilter()
+
+    class Meta:
+        model = Direction
+        fields = ['name']

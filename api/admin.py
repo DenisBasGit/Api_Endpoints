@@ -1,8 +1,12 @@
 from django.contrib import admin
 from .models import Doctor, Direction
 
+
+
+
 class DoctorAdmin (admin.ModelAdmin):
-    list_display = ["name", "slag", "direction","description" ,"date" ,"years_of_experience" ,"number_sort"]
+    list_display = ["name", "slag","description" ,"date" ,"years_of_experience" ,"number_sort"]
+    filter_horizontal = ['directions']
 
     class Meta:
         model = Doctor
@@ -11,7 +15,6 @@ class DoctorAdmin (admin.ModelAdmin):
 admin.site.register(Doctor, DoctorAdmin)
 
 class DirectionAdmin (admin.ModelAdmin):
-    model = Direction
     list_display = ["name", "slag", "number_sort"]
 
     class Meta:

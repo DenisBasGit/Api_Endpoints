@@ -12,7 +12,7 @@ class ApiView(generics.ListAPIView):
     serializer_class = DoctorSerializer
     filter_backends = (DjangoFilterBackend, SearchFilter, OrderingFilter)
     filter_class = DoctorFilter
-    search_fields = ('name', 'years_of_experience', 'direction__name')
+    search_fields = ('name', 'years_of_experience', 'directions__name')
 
 class SortView(generics.ListAPIView):
     queryset = Doctor.objects.order_by('number_sort', 'name')
@@ -24,3 +24,6 @@ class SortView(generics.ListAPIView):
 class DirectionView(generics.ListAPIView):
     queryset = Direction.objects.all()
     serializer_class = DirectionSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['name', 'slag','number_sort']
+    search_fields = ('name', 'slag','number_sort')
