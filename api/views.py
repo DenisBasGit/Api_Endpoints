@@ -8,7 +8,7 @@ from .service import DoctorFilter
 from rest_framework.filters import SearchFilter, OrderingFilter
 
 class ApiView(generics.ListAPIView):
-    queryset = Doctor.objects.all()
+    queryset = Doctor.objects.prefetch_related("directions").all()
     serializer_class = DoctorSerializer
     filter_backends = (DjangoFilterBackend, SearchFilter, OrderingFilter)
     filter_class = DoctorFilter
